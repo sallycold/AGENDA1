@@ -19,10 +19,7 @@ Public Class Form1
         End If
     End Sub
 
-    Public Sub RestablecerComboBox1()
-        ComboBox1.SelectedIndex = 0 ' Cambiá el índice si querés otro valor por defecto
-        ActualizarLabel6()
-    End Sub
+    
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
         LIMPIAR()
