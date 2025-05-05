@@ -22,7 +22,12 @@ Public Class Form1
     
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
-        LIMPIAR()
+         Dim CMD As New OleDb.OleDbCommand("DELETE FROM AGENDA WHERE AGRUPADO='" & ComboBox1.Text & "'", CN)
+         CN.Open()
+          CMD.ExecuteNonQuery()
+          CN.Close()
+         LIMPIAR()
+          MsgBox("EL REGISTRO SE ELIMINO")
 
     End Sub
 
