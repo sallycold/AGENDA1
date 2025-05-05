@@ -118,7 +118,7 @@ Public Class Form2
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
             Form1.Show()
-            Form1.RestablecerComboBox1()
+            Form1.ActualizarLabel6()
             Me.Hide()
 
         Catch ex As Exception
