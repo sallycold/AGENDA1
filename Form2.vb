@@ -41,6 +41,8 @@ Public Class Form2
 
         ' Armar consulta
         Dim consulta As String = $"SELECT * FROM AGENDA WHERE [{campo}] LIKE ? ORDER BY [{campoOrden}] {ordenSql}"
+            'Dim consulta As String = "SELECT * FROM AGENDA WHERE campo LIKE ? ORDER BY " & campoOrden & "" & ordenSql
+            
 
         Dim comando As New OleDbCommand(consulta, CN)
         comando.Parameters.AddWithValue("?", operadorLike)
@@ -67,9 +69,9 @@ Public Class Form2
         ComboBox3.Items.AddRange({"que comience", "que termine", "que contenga"}) ' Tipo de búsqueda
         ComboBox2.Items.AddRange(campos) ' Campo para ordenar (ORDER BY)
 
-        ComboBox1.SelectedIndex = 0
-        ComboBox3.SelectedIndex = 2
-        ComboBox2.SelectedIndex = 0
+        'ComboBox1.SelectedIndex = 0
+       ' ComboBox3.SelectedIndex = 2
+        'ComboBox2.SelectedIndex = 0
 
     End Sub
 
@@ -126,3 +128,5 @@ Public Class Form2
 
 
 End Class
+
+        
