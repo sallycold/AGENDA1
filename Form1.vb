@@ -118,18 +118,7 @@ Public Class Form1
         End If
 
     End Sub
-    Private Sub RedondearControl(control As Control, radio As Integer)
-        Dim path As New Drawing2D.GraphicsPath()
-
-        path.StartFigure()
-        path.AddArc(New Rectangle(0, 0, radio, radio), 180, 90)
-        path.AddArc(New Rectangle(control.Width - radio, 0, radio, radio), 270, 90)
-        path.AddArc(New Rectangle(control.Width - radio, control.Height - radio, radio, radio), 0, 90)
-        path.AddArc(New Rectangle(0, control.Height - radio, radio, radio), 90, 90)
-        path.CloseFigure()
-
-        control.Region = New Region(path)
-    End Sub
+    
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
