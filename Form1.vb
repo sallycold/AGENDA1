@@ -140,7 +140,8 @@ Public Class Form1
             MessageBox.Show("TELEFONO3 debe ser un número.")
             Exit Sub
         End If
-
+        ' uliiza maskeytexb en ves de texbox ya que lo pogras modificar y podraa poner un guion ej; 8888-7777
+        ' y asi pogras utiliza guardar como dato string y no en numero (si es número se suma )
 
         If TextBox9.Visible AndAlso Not String.IsNullOrWhiteSpace(TextBox9.Text) Then
             Dim fechaTemp As Date
